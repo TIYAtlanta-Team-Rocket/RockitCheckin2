@@ -13,6 +13,9 @@ class UserStore {
     static var testUser2: User = User.createUserWithData(name: "Test2", email: "Test2@Test2.Test2", password: "Test2Test2", friends: [], events: [])
     static var testUser3: User = User.createUserWithData(name: "Test3", email: "Test3@Test3.Test3", password: "Test3Test3", friends: [], events: [])
     
+    static func addUserToStore(user: User) {
+        store?.append(user);
+    }
     
     func fetchAttendeesForEvent(event: Event, online: Bool) {
         

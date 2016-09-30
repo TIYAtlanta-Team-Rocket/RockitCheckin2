@@ -20,6 +20,32 @@ class WebLink {
         case invalidUser
     }
     
+    static func logInWithUserCreds(email: String, password: String) throws {
+        let session = URLSession.shared
+        let url: URL = URL(string: "\(baseURL)\(webMethods.login.rawValue)")!
+        var urlrequest: URLRequest = URLRequest.init(url: url)
+        urlrequest.httpMethod = "POST"
+        urlrequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlrequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        let emailPassword: [String: String] = ["password" : password, "email" : email]
+        
+        do {
+            urlrequest.httpBody = try JSONSerialization.data(withJSONObject: emailPassword, options: [])
+        } catch let JSONSerializationError {
+            throw JSONSerializationError
+        }
+        let task = session.dataTask(with: urlrequest) { (data: Data?, response: URLResponse?, error: Error?) in
+            if data != nil {
+                let newdata = data as! [String: AnyObject]
+                new user = User.createUserWithData(name: <#T##String#>, email: <#T##String#>, password: <#T##String#>, friends: <#T##[String]#>, events: <#T##[UUID]#>)
+                
+                ///// STOPPED HERE //////
+            }
+        }
+        task.resume()
+    }
+    
     static func lookUpUserWithIDTest() throws {
         let session = URLSession.shared
         let url: URL = URL(string: "\(baseURL)\(webMethods.login.rawValue)")!
@@ -65,7 +91,6 @@ class WebLink {
         } catch let errorthing {
             throw errorthing
         }
-        throw lada.invalidEmailOrPassword("Invalid Email Or Password")
     }
     
     static func fetchUserWithLogin(email: String, password: String) throws -> User? {
