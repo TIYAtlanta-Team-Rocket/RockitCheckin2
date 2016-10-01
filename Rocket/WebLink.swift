@@ -43,8 +43,8 @@ class WebLink {
             }
             
             if data != nil {
-                let parserResult = JSONParser.JSONDataToArray(data: data!)
-                //         var newuser = User.createUserWithData(name: <#T##String#>, email: <#T##String#>, password: <#T##String#>, friends: <#T##[String]#>, events: <#T##[UUID]#>)
+             //   let parserResult = JSONParser.JSONDataToArray(data: data!)
+                //         var newuser = User.createUserWithData(name: String, email: String, password: String, friends: [String], events: [UUID])
                 
                 ///// STOPPED HERE //////
             }

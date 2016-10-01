@@ -143,7 +143,7 @@
                                         <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XnN-8Z-bdq" id="idC-DK-hNa">
-                                            <frame key="frameInset" width="1000" height="43.5"/>
+                                            <frame key="frameInset" width="1000" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -204,7 +204,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U3b-ZL-2Lo" id="K8w-IU-kzC">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -249,18 +249,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9O-WD-Pz0">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="4ze-vB-3JX"/>
-                                    <constraint firstAttribute="width" constant="70" id="BtF-tT-m0y"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SampleName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XAU-3F-s9e">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9O-WD-Pz0">
+                                <frame key="frameInset" minX="147" minY="222" width="80" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4ze-vB-3JX"/>
+                                    <constraint firstAttribute="width" constant="70" id="BtF-tT-m0y"/>
+                                </constraints>
+                                <state key="normal" title="Email"/>
+                                <connections>
+                                    <action selector="emailButtonPressedWithSender:" destination="vZ6-S8-GF4" eventType="touchUpInside" id="pWZ-vc-0Px"/>
+                                    <segue destination="0AX-ur-VEo" kind="show" identifier="emailSeque" id="CbH-If-i10"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -279,10 +284,31 @@
                             <constraint firstAttribute="trailingMargin" secondItem="XAU-3F-s9e" secondAttribute="trailing" id="pTi-dL-4ei"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailButton" destination="e9O-WD-Pz0" id="SjD-id-QU3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBB-gg-L1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1975" y="918"/>
+            <point key="canvasLocation" x="1973.5999999999999" y="917.99100449775119"/>
+        </scene>
+        <!--Mail Compose View Controller-->
+        <scene sceneID="PMb-bf-5mp">
+            <objects>
+                <viewController id="0AX-ur-VEo" customClass="MFMailComposeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FHW-Qo-eUQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="q9V-bg-3Za"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wdX-HQ-NSh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8GI-S9-FQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1559" y="1678"/>
         </scene>
         <!--Test Event Table View Controller-->
         <scene sceneID="xv2-Yh-v9h">
@@ -297,7 +323,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w1n-hI-TFj" id="ISO-Wv-1qY">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxD-o2-erg">
@@ -418,7 +444,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rwm-dM-PC4" id="ItW-LX-VfD">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>

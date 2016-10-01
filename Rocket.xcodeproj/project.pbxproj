@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2836F5F41DA022B400B081E3 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836F5F31DA022B400B081E3 /* EmailViewController.swift */; };
 		6514365F1D9FF0C800BC05DB /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514365E1D9FF0C800BC05DB /* JSONParser.swift */; };
 		651436611D9FF2AA00BC05DB /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436601D9FF2AA00BC05DB /* NewUser.swift */; };
 		651436631DA003FF00BC05DB /* TestEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436621DA003FF00BC05DB /* TestEventTableViewController.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2836F5F31DA022B400B081E3 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		6514365E1D9FF0C800BC05DB /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		651436601D9FF2AA00BC05DB /* NewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
 		651436621DA003FF00BC05DB /* TestEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEventTableViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				65615B101D9DA4B70079227F /* Assets.xcassets */,
 				65615B3F1D9DC3130079227F /* MyEventsViewController.swift */,
 				65615B511D9E9BBB0079227F /* Main.storyboard */,
+				2836F5F31DA022B400B081E3 /* EmailViewController.swift */,
 				65615B121D9DA4B70079227F /* LaunchScreen.storyboard */,
 				65615B151D9DA4B70079227F /* Info.plist */,
 				65615B0B1D9DA4B70079227F /* LoginViewController.swift */,
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65615B4C1D9E2E3F0079227F /* WebLink.swift in Sources */,
+				2836F5F41DA022B400B081E3 /* EmailViewController.swift in Sources */,
 				651436611D9FF2AA00BC05DB /* NewUser.swift in Sources */,
 				65615B461D9DC8F60079227F /* FriendListTableViewController.swift in Sources */,
 				651436631DA003FF00BC05DB /* TestEventTableViewController.swift in Sources */,
