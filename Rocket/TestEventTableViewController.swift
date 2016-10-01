@@ -2,50 +2,50 @@ import UIKit
 
 class NewEventTableViewController: UITableViewController {
     
-    var events: [Event] = EventStore.tempEvents {
-        didSet {
-            tableView.reloadData()
-            for event in events {
-                print(event)
-            }
-        }
-    }
+    //   var events: [Event] = EventStore.tempEvents {
+//        didSet {
+//            tableView.reloadData()
+//            for event in events {
+//                print(event)
+//            }
+//        }
+//    }
     
-    fileprivate var eventStore = EventStore.tempEvents
-    
-}
-
-extension NewEventTableViewController {
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! eventCell
-        
-        let event = events[indexPath.row]
-        
-        cell.title.text = event.name
-        
-        cell.eventID.text = event.eventID?.uuidString
-        
-        return cell
-    }
+    //   fileprivate var eventStore = EventStore.tempEvents
     
 }
 
-class eventCell: UITableViewCell {
-    
-    @IBOutlet var title: UILabel!
-    @IBOutlet var eventID: UILabel!
-    
-    func updateWith(event: Event) {
-        self.title.text = event.name
-        self.eventID.text = event.eventID?.uuidString
-    }
-    
-}
+//extension NewEventTableViewController {
+//    
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return events.count
+//    }
+//    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! eventCell
+//        
+//        let event = events[indexPath.row]
+//        
+//        cell.title.text = event.name
+//        
+//        cell.eventID.text = event.eventID?.uuidString
+//        
+//        return cell
+//    }
+//    
+//}
+//
+//class eventCell: UITableViewCell {
+//    
+//    @IBOutlet var title: UILabel!
+//    @IBOutlet var eventID: UILabel!
+//    
+//    func updateWith(event: Event) {
+//        self.title.text = event.name
+//        self.eventID.text = event.eventID?.uuidString
+//    }
+//    
+//}
 
 
 //@interface ItemsViewController ()

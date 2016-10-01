@@ -5,7 +5,7 @@ import Foundation
 /// Various functions using different inputs to return "User" or "Event" Objects based on various queries
 class WebLink {
     
-    static var baseURL: String = "http://10.0.0.138:8080"
+    static var baseURL: String = "http://rocketcheckin.herokuapp.com"
     
     public enum webMethods: String {
         case login = "/login.json"
@@ -20,7 +20,7 @@ class WebLink {
         case invalidUser
     }
     
-    static func logInWithUserCreds(email: String, password: String) throws {
+    static func getMainUserWithCreds(email: String, password: String) throws -> User? {
         let session = URLSession.shared
         let url: URL = URL(string: "\(baseURL)\(webMethods.login.rawValue)")!
         var urlrequest: URLRequest = URLRequest.init(url: url)
@@ -43,17 +43,35 @@ class WebLink {
             }
             
             if data != nil {
-                let parserResult = JSONParser.JSONDataToArray(data: data!)
-                //         var newuser = User.createUserWithData(name: <#T##String#>, email: <#T##String#>, password: <#T##String#>, friends: <#T##[String]#>, events: <#T##[UUID]#>)
-                
-                ///// STOPPED HERE //////
+                //    let            }
             }
         }
         task.resume()
+        return nil
     }
     
-    static func registerUserWithCreds(user: User) throws {
+    static func registerUser(user: User) throws {
+        let session = URLSession.shared
+        let url: URL = URL(string: "\(baseURL)\(webMethods.register.rawValue)")!
+        var urlrequest: URLRequest = URLRequest.init(url: url)
+        urlrequest.httpMethod = "POST"
+        urlrequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlrequest.addValue("application/json", forHTTPHeaderField: "Accept")
         
+        let userConvertible: [String: String] = ["firstName" : user.firstName!, "lastName" : user.lastName!, "password" : user.password!, "email" : user.email!, "techSkills" : user.techSkills!]
+        do {
+            urlrequest.httpBody = try JSONSerialization.data(withJSONObject: userConvertible, options: [])
+            
+            let task = session.dataTask(with: urlrequest)  { (data: Data?, response: URLResponse?, error: Error?) in
+                if data != nil {
+                    print("\n\n\n\n We got \(data)\n\n\n\n ")
+                }
+            }
+            task.resume()
+        } catch let errorthing {
+            throw errorthing
+        }
+        return
     }
     
     static func lookUpUserWithIDTest() throws {

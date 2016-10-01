@@ -2,22 +2,22 @@
 import Foundation
 
 struct User {
-    var name: String?
+    var firstName: String?
+    var lastName: String?
     var email: String?
     var password: String?
-    var friends: [String]?
-    var events: [UUID]?
+    var techSkills: String?
     var isadmin: Bool = false
     
-    static func createUserWithData(name: String, email: String, password: String, friends: [String], events: [UUID]) -> User {
+    static func createUserWithData(firstName: String, lastName: String, email: String, password: String, techSkills: String) -> User {
         var returnUser = User()
         
         returnUser.email = email
-        returnUser.name = name
+        returnUser.firstName = firstName
+        returnUser.lastName = lastName
         returnUser.password = password
-        returnUser.friends = friends
-        returnUser.events = events
-        
+        returnUser.techSkills = techSkills
+        returnUser.isadmin = false
         return returnUser
     }
     

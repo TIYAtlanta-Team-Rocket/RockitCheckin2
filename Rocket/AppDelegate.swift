@@ -10,7 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        try? WebLink.lookUpUserWithIDTest()
+        //     try? WebLink.lookUpUserWithIDTest()
         // try? WebLink.registerUserWithIDTest()
         return true
         
