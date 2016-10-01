@@ -323,6 +323,7 @@
                                         </constraints>
                                         <state key="normal" title="Register"/>
                                         <connections>
+                                            <action selector="registrationButtonPressed:" destination="fAH-VY-W5y" eventType="touchUpInside" id="ENY-ow-eFb"/>
                                             <segue destination="BYZ-38-t0r" kind="show" identifier="HasRegisteredSegue" id="fLY-MJ-wqb"/>
                                         </connections>
                                     </button>
@@ -359,7 +360,6 @@
                         <outlet property="firstNameField" destination="RnA-oi-6gm" id="EdP-N3-oVi"/>
                         <outlet property="lastNameField" destination="Ied-Xi-LQt" id="LBg-R4-bGX"/>
                         <outlet property="passwordField" destination="qlJ-kb-fwK" id="eS9-Kf-Wrv"/>
-                        <outlet property="registerButtonPressed" destination="12Q-Ex-TBu" id="iyh-mD-sTa"/>
                         <outlet property="techSkillsField" destination="m9o-KR-MIp" id="8rE-PC-rWj"/>
                     </connections>
                 </viewController>
@@ -431,6 +431,9 @@
                                     <constraint firstAttribute="width" constant="70" id="BtF-tT-m0y"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="emailButtonPressedWithSender:" destination="vZ6-S8-GF4" eventType="touchUpInside" id="5Zf-gc-pST"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SampleName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XAU-3F-s9e">
                                 <nil key="textColor"/>
@@ -470,7 +473,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" id="w1n-hI-TFj" customClass="eventCell" customModule="Rocket" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w1n-hI-TFj" id="ISO-Wv-1qY">
                                     <frame key="frameInset" width="375" height="43"/>
@@ -591,7 +594,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttendeeCell" id="Rwm-dM-PC4">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rwm-dM-PC4" id="ItW-LX-VfD">
                                     <frame key="frameInset" width="375" height="43"/>
