@@ -13,7 +13,7 @@ class WebLink {
     }
     
 
-    public enum lada: Error {
+    public enum errorList: Error {
         case invalidEmailOrPassword(String)
         case invalidID
         case invalidEvent
@@ -24,6 +24,7 @@ class WebLink {
         let session = URLSession.shared
         let url: URL = URL(string: "\(baseURL)\(webMethods.login.rawValue)")!
         var urlrequest: URLRequest = URLRequest.init(url: url)
+        
         urlrequest.httpMethod = "POST"
         urlrequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlrequest.addValue("application/json", forHTTPHeaderField: "Accept")
@@ -35,10 +36,15 @@ class WebLink {
         } catch let JSONSerializationError {
             throw JSONSerializationError
         }
+        
         let task = session.dataTask(with: urlrequest) { (data: Data?, response: URLResponse?, error: Error?) in
+            if error != nil {
+                return
+            }
+            
             if data != nil {
-                let newdata = data as! [String: AnyObject]
-                new user = User.createUserWithData(name: <#T##String#>, email: <#T##String#>, password: <#T##String#>, friends: <#T##[String]#>, events: <#T##[UUID]#>)
+                let parserResult = JSONParser.JSONDataToArray(data: data!)
+                //         var newuser = User.createUserWithData(name: <#T##String#>, email: <#T##String#>, password: <#T##String#>, friends: <#T##[String]#>, events: <#T##[UUID]#>)
                 
                 ///// STOPPED HERE //////
             }
@@ -67,7 +73,7 @@ class WebLink {
         } catch let errorthing {
             throw errorthing
         }
-        throw lada.invalidEmailOrPassword("Invalid Email Or Password")
+        throw errorList.invalidEmailOrPassword("Invalid Email Or Password")
     }
     
     static func registerUserWithIDTest() throws {
@@ -98,7 +104,7 @@ class WebLink {
         var url: URL
         var urlrequest: URLRequest
         
-        throw lada.invalidEmailOrPassword("Invalid Email Or Pass")
+        throw errorList.invalidEmailOrPassword("Invalid Email Or Pass")
         
     }
     
@@ -107,7 +113,7 @@ class WebLink {
         var url: URL
         var urlrequest: URLRequest
         
-        throw lada.invalidEvent
+        throw errorList.invalidEvent
         
     }
     
@@ -116,7 +122,7 @@ class WebLink {
         var url: URL
         var urlrequest: URLRequest
         
-        throw lada.invalidUser
+        throw errorList.invalidUser
         
     }
     
@@ -148,8 +154,17 @@ class WebLink {
         
         
         
-        throw lada.invalidUser
+        throw errorList.invalidUser
         
     }
     
 }
+
+
+//                 switch itemResult {
+//case let .Success(items):
+//self.items = items
+//print(self.items)
+//case let .Failure(error):
+//print("Could not retrieve items because: \(error)")
+//}

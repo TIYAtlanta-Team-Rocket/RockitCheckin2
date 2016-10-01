@@ -3,7 +3,7 @@
 import Foundation
 
 struct EventStore {
-    var allTheEvents: [Event]?
+    static var allTheEvents: [Event]?
     // number of events in the Event list View
     
     static var myEvents: [Event]?

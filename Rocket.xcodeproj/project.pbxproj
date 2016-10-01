@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6514365F1D9FF0C800BC05DB /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514365E1D9FF0C800BC05DB /* JSONParser.swift */; };
+		651436611D9FF2AA00BC05DB /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436601D9FF2AA00BC05DB /* NewUser.swift */; };
+		651436631DA003FF00BC05DB /* TestEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436621DA003FF00BC05DB /* TestEventTableViewController.swift */; };
 		65615B0A1D9DA4B70079227F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B091D9DA4B70079227F /* AppDelegate.swift */; };
 		65615B0C1D9DA4B70079227F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B0B1D9DA4B70079227F /* LoginViewController.swift */; };
 		65615B111D9DA4B70079227F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65615B101D9DA4B70079227F /* Assets.xcassets */; };
@@ -46,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6514365E1D9FF0C800BC05DB /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		651436601D9FF2AA00BC05DB /* NewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
+		651436621DA003FF00BC05DB /* TestEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEventTableViewController.swift; sourceTree = "<group>"; };
 		65615B061D9DA4B70079227F /* Rocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65615B091D9DA4B70079227F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65615B0B1D9DA4B70079227F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +133,8 @@
 				65615B3B1D9DA6760079227F /* EventStore.swift */,
 				65615B3D1D9DA6950079227F /* UserStore.swift */,
 				65615B4B1D9E2E3F0079227F /* WebLink.swift */,
+				6514365E1D9FF0C800BC05DB /* JSONParser.swift */,
+				651436601D9FF2AA00BC05DB /* NewUser.swift */,
 				65615B4F1D9E8AFE0079227F /* StringValidator.swift */,
 				65615B101D9DA4B70079227F /* Assets.xcassets */,
 				65615B3F1D9DC3130079227F /* MyEventsViewController.swift */,
@@ -139,6 +147,7 @@
 				65615B451D9DC8F60079227F /* FriendListTableViewController.swift */,
 				65615B491D9DC9CB0079227F /* AttendeeListTableViewController.swift */,
 				65615B471D9DC9690079227F /* EventListTableViewController.swift */,
+				651436621DA003FF00BC05DB /* TestEventTableViewController.swift */,
 			);
 			path = Rocket;
 			sourceTree = "<group>";
@@ -299,7 +308,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				65615B4C1D9E2E3F0079227F /* WebLink.swift in Sources */,
+				651436611D9FF2AA00BC05DB /* NewUser.swift in Sources */,
 				65615B461D9DC8F60079227F /* FriendListTableViewController.swift in Sources */,
+				651436631DA003FF00BC05DB /* TestEventTableViewController.swift in Sources */,
 				65615B4A1D9DC9CB0079227F /* AttendeeListTableViewController.swift in Sources */,
 				65615B3E1D9DA6950079227F /* UserStore.swift in Sources */,
 				65615B3C1D9DA6760079227F /* EventStore.swift in Sources */,
@@ -309,6 +320,7 @@
 				65615B0C1D9DA4B70079227F /* LoginViewController.swift in Sources */,
 				65615B421D9DC6150079227F /* EventViewController.swift in Sources */,
 				65615B441D9DC8A30079227F /* ProfileViewController.swift in Sources */,
+				6514365F1D9FF0C800BC05DB /* JSONParser.swift in Sources */,
 				65615B0A1D9DA4B70079227F /* AppDelegate.swift in Sources */,
 				65615B381D9DA4C00079227F /* User.swift in Sources */,
 				65615B501D9E8AFE0079227F /* StringValidator.swift in Sources */,

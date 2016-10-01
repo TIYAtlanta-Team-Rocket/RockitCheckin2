@@ -13,7 +13,7 @@ class EventListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return EventStore.allTheEvents.count
+        return EventStore.allTheEvents!.count
     }
     
     override func tableView(_ tableView: UITableView,
@@ -25,7 +25,7 @@ class EventListTableViewController: UITableViewController {
         // Set the text on the cell with the description of the item
         // that is at the nth index of items, where n = row this cell
         // will appear in on the tableview
-        let item = eventStore.allTheEvents?[(indexPath as NSIndexPath).row]
+        
   
         
         return cell
