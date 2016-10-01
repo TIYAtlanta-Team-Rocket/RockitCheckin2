@@ -29,7 +29,6 @@
 		65615B481D9DC9690079227F /* EventListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B471D9DC9690079227F /* EventListTableViewController.swift */; };
 		65615B4A1D9DC9CB0079227F /* AttendeeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B491D9DC9CB0079227F /* AttendeeListTableViewController.swift */; };
 		65615B4C1D9E2E3F0079227F /* WebLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B4B1D9E2E3F0079227F /* WebLink.swift */; };
-		65615B501D9E8AFE0079227F /* StringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B4F1D9E8AFE0079227F /* StringValidator.swift */; };
 		65615B521D9E9BBB0079227F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65615B511D9E9BBB0079227F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +78,6 @@
 		65615B471D9DC9690079227F /* EventListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListTableViewController.swift; sourceTree = "<group>"; };
 		65615B491D9DC9CB0079227F /* AttendeeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendeeListTableViewController.swift; sourceTree = "<group>"; };
 		65615B4B1D9E2E3F0079227F /* WebLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebLink.swift; sourceTree = "<group>"; };
-		65615B4F1D9E8AFE0079227F /* StringValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringValidator.swift; path = ../StringValidator.swift; sourceTree = "<group>"; };
 		65615B511D9E9BBB0079227F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,7 +137,6 @@
 				65615B4B1D9E2E3F0079227F /* WebLink.swift */,
 				6514365E1D9FF0C800BC05DB /* JSONParser.swift */,
 				651436601D9FF2AA00BC05DB /* NewUser.swift */,
-				65615B4F1D9E8AFE0079227F /* StringValidator.swift */,
 				65615B101D9DA4B70079227F /* Assets.xcassets */,
 				65615B3F1D9DC3130079227F /* MyEventsViewController.swift */,
 				65615B511D9E9BBB0079227F /* Main.storyboard */,
@@ -331,7 +328,6 @@
 				6514365F1D9FF0C800BC05DB /* JSONParser.swift in Sources */,
 				65615B0A1D9DA4B70079227F /* AppDelegate.swift in Sources */,
 				65615B381D9DA4C00079227F /* User.swift in Sources */,
-				65615B501D9E8AFE0079227F /* StringValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
