@@ -10,6 +10,7 @@
 		6514365F1D9FF0C800BC05DB /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514365E1D9FF0C800BC05DB /* JSONParser.swift */; };
 		651436611D9FF2AA00BC05DB /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436601D9FF2AA00BC05DB /* NewUser.swift */; };
 		651436631DA003FF00BC05DB /* TestEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436621DA003FF00BC05DB /* TestEventTableViewController.swift */; };
+		651436651DA0204E00BC05DB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436641DA0204E00BC05DB /* RegistrationViewController.swift */; };
 		65615B0A1D9DA4B70079227F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B091D9DA4B70079227F /* AppDelegate.swift */; };
 		65615B0C1D9DA4B70079227F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B0B1D9DA4B70079227F /* LoginViewController.swift */; };
 		65615B111D9DA4B70079227F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65615B101D9DA4B70079227F /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		6514365E1D9FF0C800BC05DB /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		651436601D9FF2AA00BC05DB /* NewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
 		651436621DA003FF00BC05DB /* TestEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEventTableViewController.swift; sourceTree = "<group>"; };
+		651436641DA0204E00BC05DB /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		65615B061D9DA4B70079227F /* Rocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65615B091D9DA4B70079227F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65615B0B1D9DA4B70079227F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				65615B431D9DC8A30079227F /* ProfileViewController.swift */,
 				65615B411D9DC6150079227F /* EventViewController.swift */,
 				65615B451D9DC8F60079227F /* FriendListTableViewController.swift */,
+				651436641DA0204E00BC05DB /* RegistrationViewController.swift */,
 				65615B491D9DC9CB0079227F /* AttendeeListTableViewController.swift */,
 				65615B471D9DC9690079227F /* EventListTableViewController.swift */,
 				651436621DA003FF00BC05DB /* TestEventTableViewController.swift */,
@@ -319,6 +322,7 @@
 				65615B3A1D9DA4DC0079227F /* Event.swift in Sources */,
 				65615B0C1D9DA4B70079227F /* LoginViewController.swift in Sources */,
 				65615B421D9DC6150079227F /* EventViewController.swift in Sources */,
+				651436651DA0204E00BC05DB /* RegistrationViewController.swift in Sources */,
 				65615B441D9DC8A30079227F /* ProfileViewController.swift in Sources */,
 				6514365F1D9FF0C800BC05DB /* JSONParser.swift in Sources */,
 				65615B0A1D9DA4B70079227F /* AppDelegate.swift in Sources */,

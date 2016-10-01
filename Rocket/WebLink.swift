@@ -52,6 +52,10 @@ class WebLink {
         task.resume()
     }
     
+    static func registerUserWithCreds(user: User) throws {
+        
+    }
+    
     static func lookUpUserWithIDTest() throws {
         let session = URLSession.shared
         let url: URL = URL(string: "\(baseURL)\(webMethods.login.rawValue)")!

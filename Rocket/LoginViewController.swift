@@ -20,7 +20,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if StringValidator.isValidEmailString(emailField.text!) {
                 do {
                 mainUser = try WebLink.fetchUserWithLogin(email: emailField.text!, password: passwordField.text!)
-                } catch WebLink.lada.invalidEmailOrPassword(let errorString) {
+                } catch WebLink.errorList.invalidEmailOrPassword(let errorString) {
                     descriptionLabel.text = errorString
                     return
                 } catch {
@@ -40,11 +40,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if UserStore.mainUser != nil {
-        return true
-        } else {
-            return false
+        if identifier == "LoginSegue" {
+            if UserStore.mainUser != nil {
+                return true
+            } else {
+                return false
+            }
         }
+        
+        return true
     }
     
     var mainUser: User? = nil

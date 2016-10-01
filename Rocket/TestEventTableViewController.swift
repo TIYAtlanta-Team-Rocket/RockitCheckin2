@@ -1,6 +1,6 @@
 import UIKit
 
-class TestEventTableViewController: UITableViewController {
+class NewEventTableViewController: UITableViewController {
     
     var events: [Event] = EventStore.tempEvents {
         didSet {
@@ -15,7 +15,7 @@ class TestEventTableViewController: UITableViewController {
     
 }
 
-extension TestEventTableViewController {
+extension NewEventTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
