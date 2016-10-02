@@ -14,10 +14,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if StringValidator.isValidEmailString(emailField.text!) {
                 let result = WebLink.loginMainUserWithCreds(email: emailField.text!, password: passwordField.text!)
                 
-                if case let WebLink.loginCase.Success(newishUser) = result {
+                if case let WebLink.loginCase.Success(newishUser)? = result {
                     UserStore.mainUser = newishUser
                 }
-                if case let WebLink.loginCase.Failure(failureString) = result {
+                if case let WebLink.loginCase.Failure(failureString)? = result {
                     UserStore.mainUser = nil
                     descriptionLabel.text = failureString
                 }

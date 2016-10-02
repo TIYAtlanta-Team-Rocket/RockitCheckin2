@@ -31,11 +31,12 @@ class WebLink {
     
     
     
-    static func loginMainUserWithCreds(email: String, password: String) -> loginCase {
-        var returnCase: loginCase!
+    static func loginMainUserWithCreds(email: String, password: String) -> loginCase? {
+        var returnCase: loginCase?
         let session = URLSession.shared
         let url: URL = URL(string: "\(baseURL)\(webMethods.login.rawValue)")!
         var urlrequest: URLRequest = URLRequest.init(url: url)
+        
         
         urlrequest.httpMethod = "POST"
         urlrequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -57,8 +58,8 @@ class WebLink {
                 print ("\n\n\n\n\(data)\n\n\n\n")
                 
                 let jsonResult = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: AnyObject]
-                if jsonResult["error"] != nil {
-                    returnCase = loginCase.Failure(jsonResult["error"] as! String)
+                if jsonResult["errormessage"] != nil {
+                    returnCase = loginCase.Failure(jsonResult["errormessage"] as! String)
                 } else if jsonResult["user"] != nil {
                     let userData = jsonResult["user"] as! [String: AnyObject]
                     let newuserFName = userData["firstName"] as! String
@@ -88,7 +89,7 @@ class WebLink {
         urlrequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlrequest.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        let userConvertible: [String: String] = ["firstName" : user.firstName!, "lastName" : user.lastName!, "password" : user.password!, "email" : user.email!, "techSkills" : user.techSkills!]
+        let userConvertible: [String: AnyObject] = ["firstName" : user.firstName! as AnyObject, "lastName" : user.lastName! as AnyObject, "password" : user.password! as AnyObject, "email" : user.email! as AnyObject, "techSkills" : user.techSkills! as AnyObject, "isAdmin" : true as AnyObject]
         do {
             urlrequest.httpBody = try JSONSerialization.data(withJSONObject: userConvertible, options: [])
             
