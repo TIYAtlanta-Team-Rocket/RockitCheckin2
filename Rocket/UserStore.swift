@@ -17,11 +17,11 @@ class UserStore {
         store?.append(user);
     }
     
-    func fetchAttendeesForEvent(event: Event, online: Bool) {
+    static func fetchAttendeesForEvent(event: Event) {
         
     }
     
-    func fetchFriendsForUser(user: User, online: Bool) {
+    static func fetchFriendsForUser(user: User) {
         
     }
     

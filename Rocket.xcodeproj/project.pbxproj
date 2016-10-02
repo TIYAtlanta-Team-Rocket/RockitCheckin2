@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2836F5F41DA022B400B081E3 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836F5F31DA022B400B081E3 /* EmailViewController.swift */; };
+		650868581DA150D50036BF5F /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650868571DA150D50036BF5F /* NewEventViewController.swift */; };
 		6514365F1D9FF0C800BC05DB /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514365E1D9FF0C800BC05DB /* JSONParser.swift */; };
 		651436611D9FF2AA00BC05DB /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436601D9FF2AA00BC05DB /* NewUser.swift */; };
 		651436631DA003FF00BC05DB /* TestEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436621DA003FF00BC05DB /* TestEventTableViewController.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		2836F5F31DA022B400B081E3 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		650868571DA150D50036BF5F /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		6514365E1D9FF0C800BC05DB /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		651436601D9FF2AA00BC05DB /* NewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
 		651436621DA003FF00BC05DB /* TestEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEventTableViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				65615B491D9DC9CB0079227F /* AttendeeListTableViewController.swift */,
 				65615B471D9DC9690079227F /* EventListTableViewController.swift */,
 				651436621DA003FF00BC05DB /* TestEventTableViewController.swift */,
+				650868571DA150D50036BF5F /* NewEventViewController.swift */,
 			);
 			path = Rocket;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			files = (
 				65615B4C1D9E2E3F0079227F /* WebLink.swift in Sources */,
 				2836F5F41DA022B400B081E3 /* EmailViewController.swift in Sources */,
+				650868581DA150D50036BF5F /* NewEventViewController.swift in Sources */,
 				651436611D9FF2AA00BC05DB /* NewUser.swift in Sources */,
 				65615B461D9DC8F60079227F /* FriendListTableViewController.swift in Sources */,
 				651436631DA003FF00BC05DB /* TestEventTableViewController.swift in Sources */,
@@ -577,6 +581,7 @@
 				65AF6B541DA07BD00095ABBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65AF6B601DA07BD80095ABBF /* Build configuration list for PBXNativeTarget "RocketUITests" */ = {
 			isa = XCConfigurationList;
@@ -585,6 +590,7 @@
 				65AF6B621DA07BD80095ABBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
