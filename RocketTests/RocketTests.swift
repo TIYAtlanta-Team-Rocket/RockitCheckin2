@@ -7,9 +7,9 @@ import XCTest
 class RocketTests: XCTestCase {
      
     
-    static var testUser1 = User.createUserWithData(firstName: "John" , lastName: "Frankenstein", email: "john@drfrank.com", password: "TestTest", techSkills: "I bring people back from the dead")
+    static var testUser1 = User.createUserWithData(firstName: "John" , lastName: "Frankenstein", email: "john@drfrank.com", password: "TestTest", techSkills: "I bring people back from the dead", isAdmin: true)!
     
-    static var testUser2 = User.createUserWithData(firstName: "Amanda" , lastName: "Hugandkiss", email: "kiss@xoxoxo.biz" , password: "❤️❤️❤️❤️❤️❤️", techSkills: "Daycare, prank calls, etc")
+    static var testUser2 = User.createUserWithData(firstName: "Amanda" , lastName: "Hugandkiss", email: "kiss@xoxoxo.biz" , password: "❤️❤️❤️❤️❤️❤️", techSkills: "Daycare, prank calls, etc", isAdmin: false)!
     
     
     func testNotNil() {
@@ -36,13 +36,18 @@ class RocketTests: XCTestCase {
     }
     
     
-    func testLessThanFive() {
+    func testLessThanTwo() {
         
         if (RocketTests.testUser1.firstName?.characters.count)! < 2 {
             XCTFail("Characters less than five")
         }
         
         
+    }
+    
+    func testIsAdmin() {
+            XCTAssertTrue(RocketTests.testUser1.isAdmin, "You are an admin")
+          //  XCTAssertTrue(RocketTests.testUser2.isAdmin, "You are not an admin")
     }
     
     
