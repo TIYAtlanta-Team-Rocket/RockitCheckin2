@@ -8,8 +8,11 @@ class WebLink {
     static var baseURL: String = "http://rocketcheckin.herokuapp.com"
     
     public enum webMethods: String {
-        case login = "/login.json"
-        case register = "/register.json"
+        case login = "/login.json" // expects an email and password
+        case register = "/register.json" // expects a User Object
+        case checkedInEvents = "/checkedinevents.json" // expects a User Object
+        case allevents = "/events.json" // Expects nothing
+        case eventAttendees = "/attendees.json" // Expects an Event Object
     }
     
 
@@ -20,7 +23,15 @@ class WebLink {
         case invalidUser
     }
     
-    static func getMainUserWithCreds(email: String, password: String) throws -> User? {
+    public enum loginCase {
+        case Success(User)
+        case Failure(Error)
+    }
+    
+    
+    
+    
+    static func loginMainUserWithCreds(email: String, password: String) -> loginCase? {
         let session = URLSession.shared
         let url: URL = URL(string: "\(baseURL)\(webMethods.login.rawValue)")!
         var urlrequest: URLRequest = URLRequest.init(url: url)
@@ -34,7 +45,7 @@ class WebLink {
         do {
             urlrequest.httpBody = try JSONSerialization.data(withJSONObject: emailPassword, options: [])
         } catch let JSONSerializationError {
-            throw JSONSerializationError
+            return loginCase.Failure(JSONSerializationError)
         }
         
         let task = session.dataTask(with: urlrequest) { (data: Data?, response: URLResponse?, error: Error?) in

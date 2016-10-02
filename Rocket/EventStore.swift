@@ -19,9 +19,13 @@ struct EventStore {
 //    
 //    static var tempEvent3 = Event.createEventWithData(name: "Test3", location: "Test3Loc", attendees: [UserStore.testUser1.email!, UserStore.testUser2.email!, UserStore.testUser3.email!], eventID: UUID.init(), description: "Test3Desc")
 //    
-    static func addEventToStore(event: Event) {
-        myEvents?.append(event)
+    static func addEventToStore(event: Event, store: inout [Event]) {
+        store.append(event)
     }
+    
+    
+    
+    
     
     static func fetchEventsForUser(user: User, online: Bool) {
     

@@ -19,7 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if emailField.text!.characters.count > 5 && passwordField.text!.characters.count > 5 {
             if StringValidator.isValidEmailString(emailField.text!) {
                 do {
-                mainUser = try WebLink.fetchUserWithLogin(email: emailField.text!, password: passwordField.text!)
+                UserStore.mainUser = try WebLink.fetchUserWithLogin(email: emailField.text!, password: passwordField.text!)
                 } catch WebLink.errorList.invalidEmailOrPassword(let errorString) {
                     descriptionLabel.text = errorString
                     return
@@ -29,14 +29,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }
                 
             } else {
-                
+                descriptionLabel.text = "Email is not in a valid format"
             }
+        } else {
+            descriptionLabel.text = "Email and Password must be longer than 5 characters"
         }
-    }
-    @IBAction func registerPressed(_ sender: AnyObject) {
-        
-        
-        
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -51,10 +48,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    var mainUser: User? = nil
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Login"
@@ -65,6 +58,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidAppear(_ animated: Bool) {
         emailField.text = ""
         passwordField.text = ""
+        descriptionLabel.text = ""
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
