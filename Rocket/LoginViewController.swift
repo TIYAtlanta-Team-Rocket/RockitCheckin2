@@ -10,7 +10,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func loginPressed(_ sender: UIButton) {
         
-        if emailField.text == "Test1@Test1.Test1" && passwordField.text == "Test1Test1" {
+         if emailField.text == "Test1@Test1.Test1" && passwordField.text == "Test1Test1" {
     //        UserStore.mainUser = UserStore.testUser1
             return
         }
