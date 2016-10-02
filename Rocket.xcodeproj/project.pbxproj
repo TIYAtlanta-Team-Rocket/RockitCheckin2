@@ -8,6 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		2836F5F41DA022B400B081E3 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836F5F31DA022B400B081E3 /* EmailViewController.swift */; };
+		288BCC701DA159ED0011BAEB /* RocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF6B5B1DA07BD80095ABBF /* RocketUITests.swift */; };
+		288BCC711DA159EE0011BAEB /* RocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF6B5B1DA07BD80095ABBF /* RocketUITests.swift */; };
+		288BCC751DA159FE0011BAEB /* RocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF6B4D1DA07BD00095ABBF /* RocketTests.swift */; };
+		288BCC761DA159FE0011BAEB /* RocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF6B4D1DA07BD00095ABBF /* RocketTests.swift */; };
+		288BCC771DA15A010011BAEB /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650868571DA150D50036BF5F /* NewEventViewController.swift */; };
+		288BCC781DA15A020011BAEB /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650868571DA150D50036BF5F /* NewEventViewController.swift */; };
+		288BCC791DA15A050011BAEB /* TestEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436621DA003FF00BC05DB /* TestEventTableViewController.swift */; };
+		288BCC7A1DA15A060011BAEB /* TestEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436621DA003FF00BC05DB /* TestEventTableViewController.swift */; };
+		288BCC7B1DA15A0A0011BAEB /* EventListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B471D9DC9690079227F /* EventListTableViewController.swift */; };
+		288BCC7C1DA15A0B0011BAEB /* EventListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B471D9DC9690079227F /* EventListTableViewController.swift */; };
+		288BCC7D1DA15A0F0011BAEB /* AttendeeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B491D9DC9CB0079227F /* AttendeeListTableViewController.swift */; };
+		288BCC7E1DA15A100011BAEB /* AttendeeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B491D9DC9CB0079227F /* AttendeeListTableViewController.swift */; };
+		288BCC7F1DA15A120011BAEB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436641DA0204E00BC05DB /* RegistrationViewController.swift */; };
+		288BCC801DA15A130011BAEB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436641DA0204E00BC05DB /* RegistrationViewController.swift */; };
+		288BCC811DA15A160011BAEB /* FriendListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B451D9DC8F60079227F /* FriendListTableViewController.swift */; };
+		288BCC821DA15A170011BAEB /* FriendListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B451D9DC8F60079227F /* FriendListTableViewController.swift */; };
+		288BCC831DA15A1A0011BAEB /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B411D9DC6150079227F /* EventViewController.swift */; };
+		288BCC841DA15A1B0011BAEB /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B411D9DC6150079227F /* EventViewController.swift */; };
+		288BCC851DA15A1F0011BAEB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B431D9DC8A30079227F /* ProfileViewController.swift */; };
+		288BCC861DA15A200011BAEB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B431D9DC8A30079227F /* ProfileViewController.swift */; };
+		288BCC871DA15A230011BAEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B0B1D9DA4B70079227F /* LoginViewController.swift */; };
+		288BCC881DA15A240011BAEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B0B1D9DA4B70079227F /* LoginViewController.swift */; };
+		288BCC891DA15A290011BAEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65615B121D9DA4B70079227F /* LaunchScreen.storyboard */; };
+		288BCC8A1DA15A2A0011BAEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65615B121D9DA4B70079227F /* LaunchScreen.storyboard */; };
+		288BCC8B1DA15A2D0011BAEB /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836F5F31DA022B400B081E3 /* EmailViewController.swift */; };
+		288BCC8C1DA15A2E0011BAEB /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836F5F31DA022B400B081E3 /* EmailViewController.swift */; };
+		288BCC8D1DA15A310011BAEB /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B3F1D9DC3130079227F /* MyEventsViewController.swift */; };
+		288BCC8E1DA15A320011BAEB /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B3F1D9DC3130079227F /* MyEventsViewController.swift */; };
+		288BCC8F1DA15A390011BAEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651436681DA0440700BC05DB /* Main.storyboard */; };
+		288BCC901DA15A3A0011BAEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651436681DA0440700BC05DB /* Main.storyboard */; };
+		288BCC911DA15A400011BAEB /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436601D9FF2AA00BC05DB /* NewUser.swift */; };
+		288BCC921DA15A400011BAEB /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436601D9FF2AA00BC05DB /* NewUser.swift */; };
+		288BCC931DA15A440011BAEB /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514365E1D9FF0C800BC05DB /* JSONParser.swift */; };
+		288BCC941DA15A440011BAEB /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514365E1D9FF0C800BC05DB /* JSONParser.swift */; };
+		288BCC951DA15A470011BAEB /* WebLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B4B1D9E2E3F0079227F /* WebLink.swift */; };
+		288BCC961DA15A470011BAEB /* WebLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B4B1D9E2E3F0079227F /* WebLink.swift */; };
+		288BCC971DA15A4B0011BAEB /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B3D1D9DA6950079227F /* UserStore.swift */; };
+		288BCC981DA15A4B0011BAEB /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B3D1D9DA6950079227F /* UserStore.swift */; };
+		288BCC991DA15A530011BAEB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B371D9DA4C00079227F /* User.swift */; };
+		288BCC9A1DA15A540011BAEB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B371D9DA4C00079227F /* User.swift */; };
+		288BCC9B1DA15A570011BAEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B091D9DA4B70079227F /* AppDelegate.swift */; };
+		288BCC9C1DA15A570011BAEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B091D9DA4B70079227F /* AppDelegate.swift */; };
+		288BCC9D1DA15A5A0011BAEB /* StringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436661DA02CEE00BC05DB /* StringValidator.swift */; };
+		288BCC9E1DA15A5B0011BAEB /* StringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436661DA02CEE00BC05DB /* StringValidator.swift */; };
+		28FF40151DA1598500FBD3C9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B391D9DA4DC0079227F /* Event.swift */; };
+		28FF40161DA1598600FBD3C9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B391D9DA4DC0079227F /* Event.swift */; };
+		28FF40171DA1599700FBD3C9 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B3B1D9DA6760079227F /* EventStore.swift */; };
+		28FF40181DA1599700FBD3C9 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615B3B1D9DA6760079227F /* EventStore.swift */; };
 		650868581DA150D50036BF5F /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650868571DA150D50036BF5F /* NewEventViewController.swift */; };
 		6514365F1D9FF0C800BC05DB /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514365E1D9FF0C800BC05DB /* JSONParser.swift */; };
 		651436611D9FF2AA00BC05DB /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651436601D9FF2AA00BC05DB /* NewUser.swift */; };
@@ -299,6 +347,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288BCC891DA15A290011BAEB /* LaunchScreen.storyboard in Resources */,
+				288BCC8F1DA15A390011BAEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +356,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288BCC8A1DA15A2A0011BAEB /* LaunchScreen.storyboard in Resources */,
+				288BCC901DA15A3A0011BAEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +376,8 @@
 				651436631DA003FF00BC05DB /* TestEventTableViewController.swift in Sources */,
 				65615B4A1D9DC9CB0079227F /* AttendeeListTableViewController.swift in Sources */,
 				65615B3E1D9DA6950079227F /* UserStore.swift in Sources */,
+				288BCC711DA159EE0011BAEB /* RocketUITests.swift in Sources */,
+				288BCC751DA159FE0011BAEB /* RocketTests.swift in Sources */,
 				65615B3C1D9DA6760079227F /* EventStore.swift in Sources */,
 				65615B401D9DC3130079227F /* MyEventsViewController.swift in Sources */,
 				65615B481D9DC9690079227F /* EventListTableViewController.swift in Sources */,
@@ -343,7 +397,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288BCC951DA15A470011BAEB /* WebLink.swift in Sources */,
+				288BCC971DA15A4B0011BAEB /* UserStore.swift in Sources */,
+				288BCC791DA15A050011BAEB /* TestEventTableViewController.swift in Sources */,
+				288BCC911DA15A400011BAEB /* NewUser.swift in Sources */,
+				288BCC8D1DA15A310011BAEB /* MyEventsViewController.swift in Sources */,
+				288BCC831DA15A1A0011BAEB /* EventViewController.swift in Sources */,
+				288BCC811DA15A160011BAEB /* FriendListTableViewController.swift in Sources */,
+				28FF40151DA1598500FBD3C9 /* Event.swift in Sources */,
+				288BCC991DA15A530011BAEB /* User.swift in Sources */,
 				65AF6B4E1DA07BD00095ABBF /* RocketTests.swift in Sources */,
+				288BCC8B1DA15A2D0011BAEB /* EmailViewController.swift in Sources */,
+				288BCC7F1DA15A120011BAEB /* RegistrationViewController.swift in Sources */,
+				288BCC851DA15A1F0011BAEB /* ProfileViewController.swift in Sources */,
+				288BCC931DA15A440011BAEB /* JSONParser.swift in Sources */,
+				288BCC771DA15A010011BAEB /* NewEventViewController.swift in Sources */,
+				28FF40171DA1599700FBD3C9 /* EventStore.swift in Sources */,
+				288BCC7D1DA15A0F0011BAEB /* AttendeeListTableViewController.swift in Sources */,
+				288BCC701DA159ED0011BAEB /* RocketUITests.swift in Sources */,
+				288BCC9B1DA15A570011BAEB /* AppDelegate.swift in Sources */,
+				288BCC871DA15A230011BAEB /* LoginViewController.swift in Sources */,
+				288BCC7B1DA15A0A0011BAEB /* EventListTableViewController.swift in Sources */,
+				288BCC9D1DA15A5A0011BAEB /* StringValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +426,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288BCC961DA15A470011BAEB /* WebLink.swift in Sources */,
+				288BCC981DA15A4B0011BAEB /* UserStore.swift in Sources */,
+				288BCC7A1DA15A060011BAEB /* TestEventTableViewController.swift in Sources */,
+				288BCC921DA15A400011BAEB /* NewUser.swift in Sources */,
+				288BCC8E1DA15A320011BAEB /* MyEventsViewController.swift in Sources */,
+				288BCC841DA15A1B0011BAEB /* EventViewController.swift in Sources */,
+				288BCC821DA15A170011BAEB /* FriendListTableViewController.swift in Sources */,
+				28FF40161DA1598600FBD3C9 /* Event.swift in Sources */,
+				288BCC9A1DA15A540011BAEB /* User.swift in Sources */,
 				65AF6B5C1DA07BD80095ABBF /* RocketUITests.swift in Sources */,
+				288BCC8C1DA15A2E0011BAEB /* EmailViewController.swift in Sources */,
+				288BCC801DA15A130011BAEB /* RegistrationViewController.swift in Sources */,
+				288BCC861DA15A200011BAEB /* ProfileViewController.swift in Sources */,
+				288BCC941DA15A440011BAEB /* JSONParser.swift in Sources */,
+				288BCC781DA15A020011BAEB /* NewEventViewController.swift in Sources */,
+				28FF40181DA1599700FBD3C9 /* EventStore.swift in Sources */,
+				288BCC7E1DA15A100011BAEB /* AttendeeListTableViewController.swift in Sources */,
+				288BCC761DA159FE0011BAEB /* RocketTests.swift in Sources */,
+				288BCC9C1DA15A570011BAEB /* AppDelegate.swift in Sources */,
+				288BCC881DA15A240011BAEB /* LoginViewController.swift in Sources */,
+				288BCC7C1DA15A0B0011BAEB /* EventListTableViewController.swift in Sources */,
+				288BCC9E1DA15A5B0011BAEB /* StringValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
