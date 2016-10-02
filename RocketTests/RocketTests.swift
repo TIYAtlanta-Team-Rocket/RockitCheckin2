@@ -1,35 +1,57 @@
-//
-//  RocketTests.swift
-//  RocketTests
-//
-//  Created by Daniel Kwolek on 10/1/16.
-//  Copyright © 2016 Arcore. All rights reserved.
-//
+
 
 import XCTest
+@testable import Rocket
+
 
 class RocketTests: XCTestCase {
+     
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    static var testUser1 = User.createUserWithData(firstName: "John" , lastName: "Frankenstein", email: "john@drfrank.com", password: "TestTest", techSkills: "I bring people back from the dead")
+    
+    static var testUser2 = User.createUserWithData(firstName: "Amanda" , lastName: "Hugandkiss", email: "kiss@xoxoxo.biz" , password: "❤️❤️❤️❤️❤️❤️", techSkills: "Daycare, prank calls, etc")
+    
+    
+    func testNotNil() {
+        
+        XCTAssertNotNil(RocketTests.testUser1.firstName)
+        XCTAssertNotNil(RocketTests.testUser1.lastName)
+        XCTAssertNotNil(RocketTests.testUser1.email)
+        XCTAssertNotNil(RocketTests.testUser1.password)
+        XCTAssertNotNil(RocketTests.testUser1.techSkills)
+        
+        XCTAssertNotNil(RocketTests.testUser1)
+        XCTAssertNotNil(RocketTests.testUser2)
+
+        
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testNotBlank() {
+        XCTAssertFalse(RocketTests.testUser1.firstName == "")
+        XCTAssertFalse(RocketTests.testUser1.lastName == "")
+        XCTAssertFalse(RocketTests.testUser1.email == "")
+        XCTAssertFalse(RocketTests.testUser1.password == "")
+        XCTAssertFalse(RocketTests.testUser1.techSkills == "")
+
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testLessThanFive() {
+        
+        if (RocketTests.testUser1.firstName?.characters.count)! < 2 {
+            XCTFail("Characters less than five")
         }
+        
+        
     }
+    
+    
+    
     
 }
+
+
+
+
+
+
