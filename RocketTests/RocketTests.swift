@@ -11,6 +11,8 @@ class RocketTests: XCTestCase {
     
     static var testUser2 = User.createUserWithData(firstName: "Amanda" , lastName: "Hugandkiss", email: "kiss@xoxoxo.biz" , password: "❤️❤️❤️❤️❤️❤️", techSkills: "Daycare, prank calls, etc", isAdmin: false)!
     
+    //static var emojiTest =
+    
     
     func testNotNil() {
         
@@ -50,10 +52,24 @@ class RocketTests: XCTestCase {
           //  XCTAssertTrue(RocketTests.testUser2.isAdmin, "You are not an admin")
     }
     
+//    func testHasEmoji() {
+//        
+//        for emoji in emojiTest {
+//            if RocketTests.testUser1.firstName?.contains(emoji) {
+//                
+//          }
+//
+//        }
+    
+    }
     
     
+    // test to see if the email has an @ sign
+    // test to see if there is emoji in the email/pass etc
+    //
     
-}
+    
+
 
 
 
