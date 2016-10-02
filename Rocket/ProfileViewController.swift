@@ -20,7 +20,6 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     
     
     static func canSendEmail () {
-        let cansendmail = MFMailComposeViewController.canSendMail()
         if !MFMailComposeViewController.canSendMail() {
             print("Mail services are not available")
             return

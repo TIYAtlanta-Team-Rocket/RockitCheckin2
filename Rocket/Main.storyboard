@@ -186,6 +186,7 @@
                                         <state key="normal" title="Add Event"/>
                                         <connections>
                                             <action selector="addEventButtonPressed:" destination="sql-4R-mA2" eventType="touchUpInside" id="1p2-hb-dh3"/>
+                                            <segue destination="bdJ-hV-OFq" kind="show" id="tBU-eI-tdA"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -213,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVb-nH-lsL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2976" y="-567"/>
+            <point key="canvasLocation" x="3206" y="-652"/>
         </scene>
         <!--My Events View Controller-->
         <scene sceneID="x57-r6-L1q">
@@ -237,7 +238,7 @@
                                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XnN-8Z-bdq" id="idC-DK-hNa">
-                                                    <frame key="frameInset" width="375" height="43"/>
+                                                    <frame key="frameInset" width="375" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                                 <connections>
@@ -257,7 +258,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dkb-6H-tti" id="8oR-Wk-fi0">
-                                                    <frame key="frameInset" width="375" height="43"/>
+                                                    <frame key="frameInset" width="375" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -301,7 +302,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Oxh-mP-9iR">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="bAU-0s-Jlp">
+                        <barButtonItem key="rightBarButtonItem" title="TestTitle" id="bAU-0s-Jlp">
                             <connections>
                                 <segue destination="sql-4R-mA2" kind="show" id="xl7-Vm-bc5"/>
                             </connections>
@@ -309,7 +310,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="newEventButton" destination="bAU-0s-Jlp" id="zD8-yh-tn1"/>
-                        <outlet property="newEventButtonPressed" destination="bAU-0s-Jlp" id="6M3-ay-erM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2V-Ex-jZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -666,10 +666,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttendeeCell" id="Rwm-dM-PC4">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rwm-dM-PC4" id="ItW-LX-VfD">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -707,7 +707,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3pg-8E-p6u"/>
+        <segue reference="tBU-eI-tdA"/>
         <segue reference="afu-KN-VpH"/>
     </inferredMetricsTieBreakers>
 </document>

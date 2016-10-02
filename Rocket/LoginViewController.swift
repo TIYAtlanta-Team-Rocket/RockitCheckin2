@@ -12,20 +12,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if emailField.text!.characters.count > 1 && passwordField.text!.characters.count > 1 {
             if StringValidator.isValidEmailString(emailField.text!) {
-                let result = WebLink.loginMainUserWithCreds(email: emailField.text!, password: passwordField.text!)
-                
-                if case let WebLink.loginCase.Success(newishUser)? = result {
-                    UserStore.mainUser = newishUser
-                }
-                if case let WebLink.loginCase.Failure(failureString)? = result {
-                    UserStore.mainUser = nil
-                    descriptionLabel.text = failureString
+                WebLink.loginMainUserWithCreds(email: emailField.text!, password: passwordField.text!) { result in
+                    
+                    if case let WebLink.loginCase.Success(newishUser) = result {
+                        UserStore.mainUser = newishUser
+                    }
+                    if case let WebLink.loginCase.Failure(failureString) = result {
+                        UserStore.mainUser = nil
+                        self.descriptionLabel.text = failureString
+                    }
                 }
             } else {
                 descriptionLabel.text = "Email is not in a valid format"
             }
         } else {
-            descriptionLabel.text = "Email and Password must be longer than 5 characters"
+            descriptionLabel.text = "Email and Password must be longer than 2 characters"
         }
     }
     

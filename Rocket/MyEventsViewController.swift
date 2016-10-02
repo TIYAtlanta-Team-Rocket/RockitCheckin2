@@ -8,7 +8,6 @@ class MyEventsViewController: UIViewController {
         self.navigationController?.removeFromParentViewController()
     }
     @IBOutlet var newEventButton: UIBarButtonItem!
-    @IBOutlet var newEventButtonPressed: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +16,7 @@ class MyEventsViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
