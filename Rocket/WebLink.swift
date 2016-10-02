@@ -25,13 +25,14 @@ class WebLink {
     
     public enum loginCase {
         case Success(User)
-        case Failure(Error)
+        case Failure(String)
     }
     
     
     
     
-    static func loginMainUserWithCreds(email: String, password: String) -> loginCase? {
+    static func loginMainUserWithCreds(email: String, password: String) -> loginCase {
+        var returnCase: loginCase!
         let session = URLSession.shared
         let url: URL = URL(string: "\(baseURL)\(webMethods.login.rawValue)")!
         var urlrequest: URLRequest = URLRequest.init(url: url)
@@ -44,21 +45,39 @@ class WebLink {
         
         do {
             urlrequest.httpBody = try JSONSerialization.data(withJSONObject: emailPassword, options: [])
-        } catch let JSONSerializationError {
-            return loginCase.Failure(JSONSerializationError)
+        } catch {
+            returnCase = loginCase.Failure("JSONSerializationError")
         }
         
         let task = session.dataTask(with: urlrequest) { (data: Data?, response: URLResponse?, error: Error?) in
             if error != nil {
-                return
+                returnCase = loginCase.Failure("Data Task Returned Error in Login")
             }
-            
             if data != nil {
-                //    let            }
+                print ("\n\n\n\n\(data)\n\n\n\n")
+                
+                let jsonResult = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: AnyObject]
+                if jsonResult["error"] != nil {
+                    returnCase = loginCase.Failure(jsonResult["error"] as! String)
+                } else if jsonResult["user"] != nil {
+                    let userData = jsonResult["user"] as! [String: AnyObject]
+                    let newuserFName = userData["firstName"] as! String
+                    let newuserLName = userData["lastName"] as! String
+                    let newuserEmail = userData["email"] as! String
+                    let newuserpassword = userData["password"] as! String
+                    let newuserIsAdmin = userData["isAdmin"] as! Bool
+                    let newuserTechSkills = userData["techSkills"] as! String
+                    let returnUser = User.createUserWithData(firstName: newuserFName, lastName: newuserLName, email: newuserEmail, password: newuserpassword, techSkills: newuserTechSkills, isAdmin: newuserIsAdmin)
+                    if returnUser != nil {
+                        returnCase = loginCase.Success(returnUser!)
+                    } else {
+                        returnCase = loginCase.Failure("Failed to create User")
+                    }
+                }
             }
         }
         task.resume()
-        return nil
+        return returnCase
     }
     
     static func registerUser(user: User) throws {

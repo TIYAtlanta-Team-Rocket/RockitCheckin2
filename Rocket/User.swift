@@ -7,9 +7,9 @@ struct User {
     var email: String?
     var password: String?
     var techSkills: String?
-    var isadmin: Bool = false
+    var isAdmin: Bool = false
     
-    static func createUserWithData(firstName: String, lastName: String, email: String, password: String, techSkills: String) -> User {
+    static func createUserWithData(firstName: String, lastName: String, email: String, password: String, techSkills: String, isAdmin: Bool) -> User? {
         var returnUser = User()
         
         returnUser.email = email
@@ -17,7 +17,7 @@ struct User {
         returnUser.lastName = lastName
         returnUser.password = password
         returnUser.techSkills = techSkills
-        returnUser.isadmin = false
+        returnUser.isAdmin = isAdmin
         return returnUser
     }
     

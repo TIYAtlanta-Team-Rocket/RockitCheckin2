@@ -10,24 +10,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func loginPressed(_ sender: UIButton) {
         
-         if emailField.text == "Test1@Test1.Test1" && passwordField.text == "Test1Test1" {
-    //        UserStore.mainUser = UserStore.testUser1
-            return
-        }
-        
-        
-        if emailField.text!.characters.count > 5 && passwordField.text!.characters.count > 5 {
+        if emailField.text!.characters.count > 1 && passwordField.text!.characters.count > 1 {
             if StringValidator.isValidEmailString(emailField.text!) {
-                do {
-                UserStore.mainUser = try WebLink.fetchUserWithLogin(email: emailField.text!, password: passwordField.text!)
-                } catch WebLink.errorList.invalidEmailOrPassword(let errorString) {
-                    descriptionLabel.text = errorString
-                    return
-                } catch {
-                    descriptionLabel.text = "Unexpected Error"
-                    return
-                }
+                let result = WebLink.loginMainUserWithCreds(email: emailField.text!, password: passwordField.text!)
                 
+                if case let WebLink.loginCase.Success(newishUser) = result {
+                    UserStore.mainUser = newishUser
+                }
+                if case let WebLink.loginCase.Failure(failureString) = result {
+                    UserStore.mainUser = nil
+                    descriptionLabel.text = failureString
+                }
             } else {
                 descriptionLabel.text = "Email is not in a valid format"
             }
