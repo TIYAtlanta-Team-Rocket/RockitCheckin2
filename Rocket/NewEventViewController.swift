@@ -11,9 +11,9 @@ import UIKit
 class NewEventViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var eventNameField: UITextField!
     @IBOutlet var eventLocationField: UITextField!
-    
     @IBOutlet var descriptionField: UITextField!
     @IBAction func addEventButtonPressed(_ sender: UIButton) {
+        WebLink.createNewEvent(eventName: eventNameField.text!, location: eventLocationField.text!, time: "Time Test", description: descriptionField.text!)
     }
     
     override func viewDidLoad() {

@@ -18,7 +18,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func registrationButtonPressed(_ sender: AnyObject) {
         if checkerfunction() {
-            let user = User.createUserWithData(firstName: firstNameField.text!, lastName: lastNameField.text!, email: emailField.text!, password: passwordField.text!, techSkills: techSkillsField.text!, isAdmin: false)
+            let user = User.createUserWithData(firstName: firstNameField.text!, lastName: lastNameField.text!, email: emailField.text!, password: passwordField.text!, techSkills: techSkillsField.text!, adminFlag: false)
             try? WebLink.registerUser(user: user!)
         }
     }
