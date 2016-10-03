@@ -11,12 +11,41 @@ class WebLink {
         case login = "/login.json" // expects an email and password
         case register = "/register.json" // expects a User Object
         case checkedInEvents = "/checkedinevents.json" // expects a User Object
-        case allevents = "/events.json" // Expects nothing
+        case allEvents = "/events.json" // Expects nothing
         case eventAttendees = "/attendees.json" // Expects an Event Object
         case addEvent = "/addEvent.json" // takes in event
     }
     
-
+    static func storeAllEvents () {
+        let session = URLSession.shared
+        let url = URL(string: "\(baseURL)\(webMethods.allEvents.rawValue)")!
+        var urlRequest = URLRequest.init(url: url)
+        
+        
+        urlRequest.httpMethod = "POST"
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        let task = session.dataTask(with: urlRequest) { (data: Data?, response: URLResponse?, error: Error?) in
+            print(data)
+            if data != nil {
+                let json = (try? JSONSerialization.jsonObject(with: data!, options: []) as! [[String : Any]])!
+                
+                for event in json {
+                    let description = event["description"] as! String
+                    let eventName = event["eventName"] as! String
+                    let eventID = event["eventID"] as? Int
+                    let location = event["location"] as! String
+                    let time = event["time"] as! String
+                    EventStore.allTheEvents.append(Event.createEventWithData(name: eventName, location: location, time: time, eventID: eventID, description: description))
+                }
+                
+            }
+            
+        }
+        task.resume()
+    }
+    
     public enum errorList: Error {
         case invalidEmailOrPassword(String)
         case invalidID
@@ -230,7 +259,7 @@ class WebLink {
             return
         }
         fetcherTask.resume()
-
+        
         
         
         

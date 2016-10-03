@@ -13,7 +13,7 @@ class EventListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return EventStore.allTheEvents!.count
+        return EventStore.allTheEvents.count
     }
     
     override func tableView(_ tableView: UITableView,
