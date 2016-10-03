@@ -6,7 +6,11 @@ struct EventStore {
     static var allTheEvents: [Event] = []
     // number of events in the Event list View
     
-    static var myEvents: [Event]?
+    static var checkedInEvents: Set = [0]
+    
+    static var mainEvent: Event? = nil
+    
+    
     // number of events that have been "checked into"
     
     // static var tempEvents: [Event] = [EventStore.tempEvent1, EventStore.tempEvent2, EventStore.tempEvent3]
@@ -23,9 +27,21 @@ struct EventStore {
         store.append(event)
     }
     
-    
-    
-    
+    static func cleanEventStore(eventStore: inout [Event]) {
+    var dedupedEventStore = eventStore
+        var positionOne = 0
+        var positionTwo = 0
+        while positionOne < dedupedEventStore.count - 1 {
+            positionTwo = positionOne + 1
+            while positionTwo < dedupedEventStore.count - 1 {
+            }
+            if dedupedEventStore[positionOne].eventid == dedupedEventStore[positionTwo].eventid {
+                dedupedEventStore.remove(at: positionTwo)
+            }
+            positionOne += 1
+        }
+        eventStore = dedupedEventStore
+    }
     
     static func fetchEventsForUser(user: User, online: Bool) {
     

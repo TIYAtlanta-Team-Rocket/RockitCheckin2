@@ -5,6 +5,12 @@ import MessageUI
 class ProfileViewController: UIViewController, MFMailComposeViewControllerDelegate {
     static let composeVC = MFMailComposeViewController()
     
+    @IBOutlet var nameTextField: UITextField!
+    
+    @IBOutlet var emailTextField: UITextField!
+    
+    
+    
     func setDelegate() {
         ProfileViewController.composeVC.mailComposeDelegate = self
         // Configure the fields of the interface.
@@ -15,9 +21,6 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
 
         
     }
-    
-    
-    
     
     static func canSendEmail () {
         if !MFMailComposeViewController.canSendMail() {
@@ -38,10 +41,12 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Profile"
+        self.title = "\(UserStore.profileUser!.firstName!)"
         self.setDelegate()
     }
     override func viewDidAppear(_ animated: Bool) {
+        nameTextField.text = "\(UserStore.profileUser!.firstName!) \(UserStore.profileUser!.lastName!)"
+        emailTextField.text = UserStore.profileUser!.email!
     }
     
     
