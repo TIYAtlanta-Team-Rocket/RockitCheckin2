@@ -7,9 +7,9 @@ import XCTest
 class RocketTests: XCTestCase {
      
     
-    static var testUser1 = User.createUserWithData(firstName: "John" , lastName: "Frankenstein", email: "john@drfrank.com", password: "TestTest", techSkills: "I bring people back from the dead", isAdmin: true)!
+    static var testUser1 = User.createUserWithData(firstName: "John" , lastName: "Frankenstein", email: "john@drfrank.com", password: "TestTest", techSkills: "I bring people back from the dead", adminFlag: true)!
     
-    static var testUser2 = User.createUserWithData(firstName: "Amanda" , lastName: "Hugandkiss", email: "kiss@xoxoxo.biz" , password: "❤️❤️❤️❤️❤️❤️", techSkills: "Daycare, prank calls, etc", isAdmin: false)!
+    static var testUser2 = User.createUserWithData(firstName: "Amanda" , lastName: "Hugandkiss", email: "kiss@xoxoxo.biz" , password: "❤️❤️❤️❤️❤️❤️", techSkills: "Daycare, prank calls, etc", adminFlag: false)!
     
     //static var emojiTest =
     
@@ -48,7 +48,7 @@ class RocketTests: XCTestCase {
     }
     
     func testIsAdmin() {
-            XCTAssertTrue(RocketTests.testUser1.isAdmin, "You are an admin")
+            XCTAssertTrue(RocketTests.testUser1.adminFlag, "You are an admin")
           //  XCTAssertTrue(RocketTests.testUser2.isAdmin, "You are not an admin")
     }
     

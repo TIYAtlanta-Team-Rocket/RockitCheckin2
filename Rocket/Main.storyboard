@@ -234,14 +234,40 @@
                                         <frame key="frameInset" width="375" height="216"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckedInEventCell" id="XnN-8Z-bdq" customClass="EventCell">
-                                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckedInEventCell" id="XnN-8Z-bdq" customClass="checkedInEventCell" customModule="Rocket" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XnN-8Z-bdq" id="idC-DK-hNa">
-                                                    <frame key="frameInset" width="375" height="43.5"/>
+                                                    <frame key="frameInset" width="375" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLZ-BP-wIi">
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="event name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWu-pc-gbN">
+                                                                    <frame key="frameInset" width="296" height="28"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Event ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4o-by-k7B">
+                                                                    <frame key="frameInset" minX="296" width="64" height="28"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="CLZ-BP-wIi" secondAttribute="trailing" id="2tg-dt-8KW"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="CLZ-BP-wIi" secondAttribute="bottom" id="7HK-tA-R36"/>
+                                                        <constraint firstItem="CLZ-BP-wIi" firstAttribute="top" secondItem="idC-DK-hNa" secondAttribute="topMargin" id="LhW-aR-3TM"/>
+                                                        <constraint firstItem="CLZ-BP-wIi" firstAttribute="leading" secondItem="idC-DK-hNa" secondAttribute="leadingMargin" id="VfA-jH-lX7"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="eventID" destination="x4o-by-k7B" id="r97-PW-m0i"/>
+                                                    <outlet property="title" destination="nWu-pc-gbN" id="BwW-62-tb5"/>
                                                     <segue destination="Xnz-rf-at5" kind="show" identifier="MyEventSegue" id="6tZ-XG-olS"/>
                                                 </connections>
                                             </tableViewCell>
@@ -254,12 +280,36 @@
                                         <frame key="frameInset" minY="226" width="375" height="216"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCell" id="Dkb-6H-tti" customClass="EventCell">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCell" id="Dkb-6H-tti" customClass="eventCell" customModule="Rocket" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dkb-6H-tti" id="8oR-Wk-fi0">
-                                                    <frame key="frameInset" width="375" height="43.5"/>
+                                                    <frame key="frameInset" width="375" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ph-ZM-fSc">
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="event name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qx8-pI-TUQ">
+                                                                    <frame key="frameInset" width="296" height="28"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Event ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERZ-8D-lzF">
+                                                                    <frame key="frameInset" minX="296" width="64" height="28"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="9ph-ZM-fSc" firstAttribute="top" secondItem="8oR-Wk-fi0" secondAttribute="topMargin" id="TGI-cc-jDt"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="9ph-ZM-fSc" secondAttribute="bottom" id="ZXe-7Y-mTJ"/>
+                                                        <constraint firstItem="9ph-ZM-fSc" firstAttribute="leading" secondItem="8oR-Wk-fi0" secondAttribute="leadingMargin" id="saI-7A-CGB"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="9ph-ZM-fSc" secondAttribute="trailing" id="wt2-3h-9IQ"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
@@ -309,7 +359,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="checkedInTableView" destination="Ntd-Wj-IYP" id="Rkx-1F-Fgk"/>
                         <outlet property="newEventButton" destination="bAU-0s-Jlp" id="zD8-yh-tn1"/>
+                        <outlet property="otherEventsTableView" destination="A8o-9m-Wca" id="kZV-Uz-MIn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2V-Ex-jZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -666,10 +718,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttendeeCell" id="Rwm-dM-PC4">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rwm-dM-PC4" id="ItW-LX-VfD">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
