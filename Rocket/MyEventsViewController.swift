@@ -14,7 +14,8 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckedInEventCell", for: indexPath) as! CheckedInEventCell
         let event = EventStore.allTheEvents[indexPath.row]
         cell.title.text = event.name
-        cell.eventID.text = " "
+        cell.eventID.text = event.eventid?.description
+        cell.eventID.isHidden = true
         return cell
     }
     
@@ -39,7 +40,10 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
             self.navigationController?.setNavigationBarHidden(false, animated: false)
         }
         WebLink.updateAllEvents()
-        checkedInTableView.reloadData()
+        let privatequeue = OperationQueue()
+        privatequeue.addOperation {
+        self.checkedInTableView.reloadData()
+        }
     }
     
     
